@@ -1,6 +1,7 @@
 import React from "react";
 import logoNav from "../../assets/faviconlogo.svg";
 import CartWidget from "../CartWidget/CartWidget";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -10,26 +11,26 @@ const NavBar = () => {
           <img className="w-full" src={logoNav} alt="Logo" />
         </div>
         <div className="ml-10 flex items-baseline space-x-4 ">
-          <a
-            href=""
-            className="text-gray-950  hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+          <NavLink
+            to={`/category/rnb`}
+            className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
           >
-            Beats
-          </a>
-          <a
-            href=""
-            className="text-gray-950  hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            RNB
+          </NavLink>
+          <NavLink
+            to={`/category/hiphop`}
+            className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
           >
-            Servicios
-          </a>
-          <a
-            href=""
-            className="text-gray-950  hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            HIPHOP
+          </NavLink>
+          <NavLink
+            to={`/category/pop`}
+            className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
           >
-            Música
-          </a>
-          <CartWidget />
+            POP
+          </NavLink>
         </div>
+        <CartWidget />
       </div>
     </nav>
   );
