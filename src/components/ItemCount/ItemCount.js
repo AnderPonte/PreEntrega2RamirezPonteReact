@@ -29,7 +29,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         </div>
         <div>
           <button
-            className="Button"
+            className="bg-lime-200 shadow-lg"
             onClick={() => onAdd(quantity)}
             disabled={!stock}
           >

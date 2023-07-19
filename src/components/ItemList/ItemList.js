@@ -1,7 +1,7 @@
 import { Item } from "../Item/Item";
-import { getProducts } from "../../asyncMock";
 
 const ItemList = ({ products }) => {
+  console.log(products);
   return (
     <div className="flex flex-wrap justify-center gap-6">
       {products.map((prod) => (

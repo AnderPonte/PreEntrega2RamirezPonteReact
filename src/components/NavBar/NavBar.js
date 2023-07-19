@@ -1,15 +1,15 @@
 import React from "react";
 import logoNav from "../../assets/faviconlogo.svg";
 import CartWidget from "../CartWidget/CartWidget";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav>
       <div className="flex flex-wrap justify-between p-3.5 ">
-        <div>
+        <Link to="/">
           <img className="w-full" src={logoNav} alt="Logo" />
-        </div>
+        </Link>
         <div className="ml-10 flex items-baseline space-x-4 ">
           <NavLink
             to={`/category/rnb`}
