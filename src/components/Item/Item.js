@@ -14,7 +14,7 @@ const Item = ({ id, name, img, price, description }) => {
         <p>Descripción: {description}</p>
       </section>
       <footer>
-        <button className="bg-lime-200 shadow-lg">
+        <button className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600 mt-2">
           <Link to={`/item/${id}`}>Ver detalle</Link>
         </button>
       </footer>
